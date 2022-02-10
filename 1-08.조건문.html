@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //if, switch
+        //if문은 범위 조건을 걸수 있다 switch는 상수로만 가능하다 문자도 가능
+        // if(조건){
+            
+        // }
+        var age = 19;
+        if(age > 18) {
+            console.log("당신은 성인입니다.");
+        }else {
+            console.log("당신은 성인이 아닙니다.");
+        }
+
+        var age = 17;
+        var isAdult = false;
+
+        if (age > 18) {
+            isAdult = true;
+        }
+        // else {
+        //     isAdult = false;
+        // }
+        
+        var hour = 14;
+        if(hour < 10) {
+            console.log("Good mornimg");
+        } else if(hour < 18) {
+            console.log("Good afternoon");
+        } else if(hour < 21) {
+            console.log("Good evening");
+        } else {
+            console.log("Good night");
+        }
+
+        //if else
+
+        var d = new Date();
+        var day = d.getDay();
+        console.log(day);
+        var dayname = "";
+
+        switch (day) {
+            case 0:
+                dayname = "일요일";
+                break;
+            case 2:
+                dayname = "월요일";
+                break;
+            case 3:
+                dayname = "화요일";
+                break;
+            case 4:
+                dayname = "수요일";
+                break;    
+            case 5:
+                dayname = "목요일";
+                break;
+            case 6:
+                dayname = "금요일";
+                break;
+            case 7:
+                dayname = "토요일";
+                break;
+            
+            default:
+                dayname = ""
+                break;
+        }
+
+        console.log(dayname);
+    </script>
+</body>
+</html>
