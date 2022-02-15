@@ -5,8 +5,106 @@
 </head>
 <body>
     <script>
+        var txt = "ABCDEFGHIJKLMN";
+        console.log(txt.length); //글자길이
 
+        //indexOf
+        var str = "Please locate where 'locate'";
+        console.log(str.indexOf("locate"));
+        console.log(str.indexOf("JOhn"));
+        if(str.indexOf("locate") > -1){
+            console.log("locate 문자발견")
+        }
         
+        //lastIndexOf
+        console.log(str.lastIndexOf("locate"));
+
+
+        console.log(str.search("locate"));
+
+        //slice
+        var str = "Apple, banana, kiwi";
+        console.log(str.slice(7,13));
+        console.log(str.slice(7));
+        console.log(str.slice(-13))
+        console.log(str.slice(-12,-6));
+
+        //substring
+        console.log(str.substring(7,13)); //slice는 배열에 substring는 문자열에 자주사용
+
+
+        //substr  는 (순서번호 , 그위치부터글자수)
+        console.log(str.substr(7,6));
+
+        var birthday = "970527";
+        console.log(birthday.substr(0,2));
+        console.log(birthday.substr(2,2));
+
+        var birthday = "1997-05-27";
+        console.log(birthday.substring(0,birthday.indexOf("-")));
+
+        //repace
+        var str = "Please visit here!";
+        var str2 = str.replace("here", "there");
+        console.log(str2);
+
+        var str = "Please visit here here here!";
+        var str2 = str.replace("here", "there");
+        console.log(str2);
+
+        var str = "Please visit here Here here!";
+        var str2 = str.replace(/here/g, "there");
+        console.log(str2);
+
+        var str = "Please visit here Here here!";
+        var str2 = str.replace(/here/gi, "there");
+        console.log(str2);
+
+        //upperCase 다대문자로바꿈 toUpperCase
+        console.log(str.toUpperCase());
+
+        //lowerCase 다소문자로  toLowerCase
+        console.log(str.toLowerCase());
+
+        //john
+        //데이터베이스 john, John
+        //JOHN
+        //다대문자로바꾸거나 다소문자로 바뀜
+
+
+        //concat
+        var txt1 = "Hello";
+        var txt2 = "World";
+        var txt3 = txt1 + " " + txt2;
+        console.log(txt3);
+        var txt4 = txt1.concat(" ",txt2);
+        console.log(txt4);
+
+        //trim 공백제거
+        var str = "        Hello World!      ";
+        console.log(str.trim());
+
+        //padStart
+        var str = "5";
+        console.log(str.padStart(4,0)); //4글자로 만들고 만들떄 부족할시 앞글자 0으로 채워라
+
+        //padEnd
+        console.log(str.padEnd(4.0));
+
+        //charAt
+        var str = "Hello World!";
+        console.log(str.charAt(0));
+
+        //split
+        var tags = "키보드, 기계식,블루투스";
+        var arr = tags.split(",");
+        console.log(arr);
+
+        var birthday = "1997-06-12";
+        var arr = birthday.split("-");
+        console.log(arr);
+
+
     </script>
 </body>
 </html>
