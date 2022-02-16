@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = true; // or false
+        var y = new Boolean(true);
+
+        console.log(typeof x); // boolean
+        console.log(typeof y); // object
+        console.log(x === y); // typeof 다름 고로 false
+
+        console.log(10 > 9);
+        console.log(Boolean(10 > 9));
+
+        var x =0;
+        console.log(x);
+        console.log(Boolean(x));
+
+        // var x; -undefined
+        var x = "";
+        console.log(Boolean(x));
+
+        // var s = "abc"
+        // var s2 = new String("abc")
+        // new Number (3);
+
+
+    </script>
+</body>
+</html>
