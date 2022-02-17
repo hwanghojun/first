@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //
+
+        var d = new Date(); //현재 날짜/시간
+        console.log(d);
+
+        d.setFullYear(2021);
+        d.setMonth(0)
+
+        console.log("Timezone",d.getTimezoneOffset()); //분단위
+        //-540 = -9시간 * -1
+
+        //Thu Feb 17 2022 21:01:30 GMT+0900 (한국 표준시)
+
+        var year = d.getFullYear();
+        var utcyear = d.getUTCFullYear();
+        console.log("year",year);
+
+        var month = d.getMonth();
+        var utcmonth = d.getUTCMonth();
+        console.log("month",month);
+
+        var date = d.getDate();
+        var utcdate = d.getUTCDate();
+        console.log("date",date);
+
+        var day = d.getDay();
+        var utcday = d.getUTCDay();
+        console.log("day",day);
+        //일요일 - 0
+        //월요일 - 1
+        //화요일 - 2
+        //수요일 - 3
+
+        var hour= d.getHours();
+        var minute = d.getMinutes();
+        var second = d.getSeconds();
+
+
+        var d = new Date();
+
+        //타임존
+        //2021.03.30 12:23:33  ==>  2021.03.30 03:23:33
+        //글제목,작성자,작성일 : 2021.03.30 12:23:33
+        //2021.03.30 03:23:33
+
+        //
+
+        //
+
+
+        //month 월인경우는 0부터시작 1월- 0
+        //day 일자인경우는 1 - 1
+        var d = new Date(2022,0,1,11,14,23);
+        console.log(d);
+        
+        //2021-03-21, 2021.03.21
+        //월 일 년도 - Mar 21, 2021
+        var month_en = ["Jan", "Feb", "Mar"];
+
+        //3월인경우 - 2가 아니고 3준다고 치면,
+        var mon = 3;
+        console.log(month_en[mon-1])
+
+
+        //실무에서는 moment.js를씀 cdn
+
+    </script>
+</body>
+</html>
