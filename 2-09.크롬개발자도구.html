@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hellow World!")
+        console.info("Hellow World!") //정보
+        console.warn("Hellow World!") //경고
+        console.error("Hellow World!") //에러
+
+        var userList = [
+            {firstName:"재석", lastName:"유", email:"yu@gmail.com"},
+            {firstName:"종국", lastName:"김", email:"kim@gmail.com"},
+            {firstName:"세찬", lastName:"양", email:"yang@gmail.com"},
+            {firstName:"석진", lastName:"지", email:"ji@gmail.com"}
+            ];
+
+        // console.log(userList);  이것보다는 table이 더 보기편하다
+        console.table(userList);
+
+        // function a(){
+        //     console.time();
+
+        //     code
+
+        //     cosnole.timeEnd();
+        // }
+
+
+        console.time();
+
+        //code
+
+        console.timeEnd();
+
+
+        console.log("This is %cstyle message.","color:red;background:black;padding:4px;");
+        // 콘솔안에 %c로 스타일링이가능하다
+
+        //페이지소스에 element란 옆에 화살표클릭후 원하는 코드결과값 클릭하면 그코드를 볼수있다
+        //만든 페이지 element에서 스타일색상을 바꾸고(미리보기 같은느낌) 원하는색상을 찾고 코드값 변경을 코드란에 할수있다.
+        
+
+
+
+    </script>
+</body>
+</html>
