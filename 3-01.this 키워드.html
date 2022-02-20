@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button type="button", onclick="this.style.backgroundColor='red'">클릭</button>
+    <button type="button" onclick="callFunc(this)" >클릭2</button>
+    <select onchange="selectchange(this)">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+</select>
+
+    <script>
+        console.log(this); // = console.log(window);
+
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // person.firstName 이라고 쓰지않고  this를 사용하여 바로 오브젝트안에있는 객체를 지정한다.
+        console.log(person.fullName());
+
+
+        function A(){
+            console.log(this);
+        }
+        //function 안에 있어도 this는 window를 지정한다.
+        A();
+
+        function callFunc(obj){
+            console.log(obj);
+        }
+
+        function selectchange(obj){
+            console.log(obj.value)
+        }
+
+
+    </script>
+</body>
+</html>
