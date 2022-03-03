@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(X1, X2){
+            var y = X1 + X2;
+            console.log(y);
+            return y;
+        }
+
+        sum(1,2);
+
+        function sum1(X1, X2, X3){
+            var y = X1 + X2 + X3;
+            console.log(y);
+            return y;
+        }
+
+        sum1(1,2,3);
+
+        function sum2(X1, X2, X3, X4){
+            var y = X1 + X2 + X3 +X4;
+            console.log(y);
+            return y;
+        }
+
+        sum2(1,2,3,4);
+
+        //X1 args--> 배열형식
+        function sum3(...X1){
+            var total = 0;
+            for(var x of X1){
+                total += x;
+            }
+            console.log(total);
+            return total;
+        }
+
+        sum3(1,2,3,4,5,6,7,8,9,10);
+
+
+        function sum3(...X1){
+            var total = 0;
+            X1.forEach(function(x,index){
+                console.log(index);
+                total += x;
+            });
+            console.log(total);
+            return total;
+        }
+
+        sum3(1,2,3,4,5,6,7,8,9,10);
+
+
+    </script>
+</body>
+</html>
