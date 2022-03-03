@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function hello(){
+            console.log("Hello world!");
+            return "Hello world!";
+        }
+
+        hello();
+
+        var hello = function(){
+            console.log("Hello world!");
+            return "Hello world!";
+        }
+        
+        var hello = () => {
+            console.log("Hello world!");
+            return "Hello world!";
+        }
+
+        var hello = () => "Hello world!";  //이건 var hello = () => {
+                                           //     return "Hello world!";
+                                           //     } 이코드와 동일
+
+        var hello = fullname => "Hello " + fullname;
+
+        console.log(hello("John Doe"));    
+
+        var hello = (firstName, lastName) => "Hello " + firstName + " " + lastName;
+
+        console.log(hello("John","Doe"));
+    
+        
+
+
+    </script>
+</body>
+</html>
