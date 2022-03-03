@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function say(message){
+        //     console.log(message);
+        // }
+
+        // function say(message) {
+        //     if(message != undefined) {
+        //         console.log(message);
+        //     }else {
+        //         console.log("파라미터가 넘어오지 않았어요.");
+        //     }
+        // }
+
+        function say(message="파라미터가 넘어오지 않았어요."){
+            console.log(message);
+        }
+
+        function Plus(x, y=1){
+            console.log(x + y);
+        }
+
+        Plus(4);
+
+
+        say("안녕하세요");
+        say(); // 첫번째 함수를 쓰면undefined 값이나온다.
+    </script>
+</body>
+</html>
