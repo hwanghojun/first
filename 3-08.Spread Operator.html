@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Spread Operator
+        //분해하는 그런 기능..
+
+        var arr1= [1,2,3];
+        var arr2= [4,5,6];
+        var arr3= arr1.concat(arr2)
+        
+        console.log(arr3);
+
+        var arr4= [4,5,6];
+        var arr5= [7,8,9];
+        var arr6= [...arr4,...arr5];
+
+        console.log(arr6);
+
+        var arr7=[1,2,3]
+        var arr8=[1,2,...arr5,3];
+
+        console.log(arr8);
+
+        var cd = "CD"
+        var alphabet = ["A","B",...cd];
+
+        console.log(alphabet);
+        
+    </script>
+</body>
+</html>
