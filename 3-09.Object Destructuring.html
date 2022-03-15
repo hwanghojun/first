@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getPerson() {
+            return {
+             firstName : "John",
+             lastName : "Doe",
+             age : 37,
+             email : "john@gmail.com",
+             country: "USA"
+            };
+        }
+
+        var person = getPerson();
+        console.log(person);
+
+        var {firstName , lastName} = getPErson();
+        console.log(firstName);
+        console.log(lastName); // 본래 console.log(person.firstName); 로 써야했음
+
+    </script>
+</body>
+</html>
