@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        //Promise
+        //
+
+        var x = 1;
+
+        //서버 호출해서 데이터를 받아오는 함수.\
+        //y = callServerData(); 
+
+        var z = x +  2;  //서버데이터가 오기까지 기다림을 약속하는 함수 promise
+
+        //axios 오픈소스 외부 라이브러리
+
+        var url = "https://fd7a4a1f-3983-401f-83bd-df8efe948d76.mock.pstmn.io/LIST"
+        // var data = axios.get(url).then(function(response){
+        //     console.log(response.data);
+        //     return response.data;
+        // });
+
+        function getData() {
+            //promis
+
+            return new Promise(function(resolve, reject){
+                axios.get(url).then(function(response){
+                console.log(response.data);
+                resolve(response.data); 
+                });
+
+            });
+        }
+
+        getData().then(function(data){
+            //잘모르겠다 서버에서 데이터 받아오는 느낌 but 서버에있는 코드가 안맞음    
+        });
+        
+
+
+    </script>
+</body>
+</html>
