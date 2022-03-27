@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class 객체를 생성하기 위한 일종의 틀, 설계도
+        //자동차 
+
+        class Car {
+            constructor(modelName,modelYear,type,price) {
+                this.modelName = modelName;
+                this.modelYear = modelYear;
+                this.type = type;
+                this.price = price;
+            }
+            
+            getmodelName(){
+                return this.modelName;
+            }
+
+            getmodelYear(){
+                return this.modelYear;
+            }
+
+            getPrice(){
+                return this.price
+            }
+
+            setPrice(price){
+                this.price = price;
+            }
+
+
+        }
+        let car = new Car("ionic","2021","e",4000);
+        
+        console.log(car.getmodelName());
+        console.log(car.getmodelYear());
+        console.log(car.getPrice());
+
+        car.setPrice(4100);
+        console.log(car.getPrice());
+
+        let car2 = new Car("genesis","2021","g",6500);
+        
+        console.log(car.getmodelName());
+        console.log(car.getmodelYear());
+        console.log(car.getPrice());
+
+
+        class ElectronicCar extends Car{            //extends 상속한다 클래스 기능을
+            constructor(modelName,modelYear,type,price) {
+                super(modelName,modelYear,"e",price);
+            }
+            setChargeTime(time){
+                this.chargeTime = time;
+            }
+
+            getChargeTime(){
+                return this.chargeTime;
+            }
+        }
+
+        let Electcar = new ElectronicCar("iornic5","2021",4000); 
+        
+        Electcar.setChargeTime(60);
+        console.log(Electcar.getmodelName());
+        console.log(Electcar.getChargeTime());
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try{
+            consol.log("log 메세지");
+        }catch(err){
+            console.log(err.name);
+            console.log(err.message);
+        }
+
+        console.log("아무상관없는 새로운 콘솔") //try catch 를 사용하면 에러가 나도 다른기능은 가동
+
+        var x = " "
+        
+        
+        try{
+            if(x == " ") throw "empty"; //throw는 에러로 바로가라
+
+            var y = x + 3;
+            console.log(y)
+        }catch(err){
+            console.log(`x is ${err}`);
+        }finally{                       //에러가 나든 안나든 finally는 무조건 실행
+            console.log("try/catch문 제일 마지막에 반드시 실행");
+        }
+
+    </script>
+</body>
+</html>
