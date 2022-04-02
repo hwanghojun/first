@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    focus:blur:
+    <br>
+    <input type="text" id="text1" onfocus="doFocus();" onblur="doBlur(this);">  
+    <!--  onfocus 창 클릭했을때 반응 onblur 창 클릭 취소했을때 반응  -->
+    <br>select:
+    <br>
+    <select id="select1" onchange="doChange();">
+        <option value="KR">Korea</option>
+        <option value="CN">China</option>
+        <option value="JP">Japan</option>
+    </select>
+    <br>keydown:
+    <br>
+    <input type="text" id="text2" onkeydown="doKeydown(event)">
+    <!-- onkeydown 은 눌렀을때 onkeypress는 누르고 있을때 onkeyup은 누르고있다가 땠을때 -->
+    <br>
+    <button onclick="doSearch();">조회</button>
+    <button onclick="doSave();">Click</button>
+    <br>
+    <script>
+        function doFocus(){
+            console.log("doFocus");
+        }
+        function doBlur(obj) {
+            if(obj.value += ""){
+                alert("필수값입니다. 반드시 입력하시오.");
+            }
+            console.log(obj.value);
+        }
+        function doChange(){
+            var selectedValue = document.getElementById("select1").value;
+            console.log(selectedValue);
+        }
+        function doSave(){
+            console.log(doSave());
+        }
+        function doKeydown(event){
+            if(event.keyCode = 13){
+                doSearch();
+            }
+            console.log(event);
+        }
+        function doSearch(){
+            console.log("조회를 시작합니다.");            
+        }
+    </script>
+</body>
+</html>
